@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://ben3ec5ac6sn0"]
+
+[ext_resource type="Texture2D" uid="uid://c0mawrls1n5v" path="res://addons/kenney_particle_pack/flare_01.png" id="1_b3y4t"]
+
+[sub_resource type="Gradient" id="Gradient_06qw8"]
+offsets = PackedFloat32Array(0, 0.234375, 0.630208, 1)
+colors = PackedColorArray(1, 1, 0.482353, 1, 1, 0.625839, 0.766646, 1, 0.909804, 0.929412, 0, 1, 0.704477, 0.186133, 0.121862, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_e4ce0"]
+gradient = SubResource("Gradient_06qw8")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_sf17q"]
+spread = 180.0
+initial_velocity_min = 120.0
+initial_velocity_max = 240.0
+gravity = Vector3(0, 0, 0)
+linear_accel_min = 16.13
+linear_accel_max = 87.1
+radial_accel_min = -69.35
+radial_accel_max = 100.0
+tangential_accel_min = 100.0
+tangential_accel_max = 100.0
+damping_min = 25.106
+damping_max = 73.732
+attractor_interaction_enabled = false
+scale_min = 0.03
+scale_max = 0.3
+color = Color(1, 1, 0, 1)
+color_ramp = SubResource("GradientTexture1D_e4ce0")
+
+[node name="GPUParticles2D" type="GPUParticles2D"]
+position = Vector2(4, 4)
+scale = Vector2(0.3, 0.3)
+amount = 50
+process_material = SubResource("ParticleProcessMaterial_sf17q")
+texture = ExtResource("1_b3y4t")
+speed_scale = 1.27
+randomness = 1.0
+fixed_fps = 60

@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://cvtpxcc3pepwn"]
+
+[ext_resource type="Texture2D" uid="uid://bantpw2x4nma" path="res://addons/kenney_particle_pack/spark_02.png" id="1_yddw4"]
+
+[sub_resource type="Gradient" id="Gradient_md0ww"]
+offsets = PackedFloat32Array(0, 0.328125, 0.645833, 1)
+colors = PackedColorArray(1, 0.137255, 0, 1, 1, 1, 0.305882, 1, 1, 0.835294, 0.207843, 1, 1, 0, 0.0627451, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_55uwc"]
+gradient = SubResource("Gradient_md0ww")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ytjbs"]
+particle_flag_disable_z = true
+initial_velocity_min = 2.0
+initial_velocity_max = 3.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.1
+scale_max = 0.3
+color = Color(1, 0.498039, 0.309804, 1)
+color_ramp = SubResource("GradientTexture1D_55uwc")
+
+[node name="GPUParticles2D" type="GPUParticles2D"]
+position = Vector2(68, 43)
+amount = 10
+process_material = SubResource("ParticleProcessMaterial_ytjbs")
+texture = ExtResource("1_yddw4")
+lifetime = 0.5
+speed_scale = 2.0
