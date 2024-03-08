@@ -134,10 +134,22 @@ tracks/9/keys = {
 "update": 0,
 "values": [Vector2(68, -266)]
 }
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("GPUParticles2D2:process_material:scale_min")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.1]
+}
 
 [sub_resource type="Animation" id="Animation_y13mt"]
 resource_name = "test"
-length = 4.0
+length = 2.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -145,7 +157,7 @@ tracks/0/path = NodePath("ColorRect:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
@@ -157,7 +169,7 @@ tracks/1/path = NodePath("ColorRect:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(1, 1), Vector2(0.2, 0.2)]
@@ -169,7 +181,7 @@ tracks/2/path = NodePath("ColorRect:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(0, 0), Vector2(33, 43)]
@@ -181,7 +193,7 @@ tracks/3/path = NodePath("GPUParticles2D:modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0.3, 1, 2.1),
+"times": PackedFloat32Array(0, 0.4, 0.9),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
@@ -193,7 +205,7 @@ tracks/4/path = NodePath("ColorRect:color")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.6),
+"times": PackedFloat32Array(0, 0.3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(0.160784, 0.396078, 0.458824, 1), Color(1, 1, 0, 1)]
@@ -205,7 +217,7 @@ tracks/5/path = NodePath("GPUParticles2D2:modulate")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 1.4, 2.3, 2.7, 3.3),
+"times": PackedFloat32Array(0, 0.6, 1, 1.4, 1.8),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.509804), Color(1, 1, 1, 1), Color(1, 1, 1, 0.470588), Color(1, 1, 1, 0)]
@@ -217,10 +229,10 @@ tracks/6/path = NodePath("Path2D/PathFollow2D/GPUParticles2D3:modulate")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(0, 2.1, 2.7, 3.4),
+"times": PackedFloat32Array(0, 1.7, 2, 2.3),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.117647), Color(1, 1, 1, 0.470588), Color(1, 1, 1, 0)]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 0.470588), Color(1, 1, 1, 0)]
 }
 tracks/7/type = "value"
 tracks/7/imported = false
@@ -229,7 +241,7 @@ tracks/7/path = NodePath("Path2D/PathFollow2D:progress_ratio")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(2.7, 3.3),
+"times": PackedFloat32Array(1.9, 2.3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.0, 1.0]
@@ -241,7 +253,7 @@ tracks/8/path = NodePath("Claw:modulate")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat32Array(0, 3.3, 3.5),
+"times": PackedFloat32Array(0, 2.1, 2.5),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Color(1, 0, 0, 0), Color(1, 0, 0, 0), Color(1, 0, 0, 0.588235)]
@@ -253,10 +265,22 @@ tracks/9/path = NodePath("Claw:position")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"times": PackedFloat32Array(3.5, 3.7, 4),
+"times": PackedFloat32Array(2.2, 2.4, 2.5),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(85, -273), Vector2(62, -245), Vector2(33, -209)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("GPUParticles2D2:process_material:scale_min")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0.8, 1.4, 2.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.1, 0.3, 0.1]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_iv3e0"]
@@ -281,6 +305,7 @@ position = Vector2(42, 62)
 [node name="GPUParticles2D2" parent="." instance=ExtResource("2_2rg1e")]
 modulate = Color(1, 1, 1, 0.509804)
 position = Vector2(46, 59)
+scale = Vector2(2, 2)
 
 [node name="Claw" type="TextureRect" parent="."]
 modulate = Color(1, 0, 0, 0)
